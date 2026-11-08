@@ -1,0 +1,14 @@
+{
+  "name": "com.palexen.tools",
+  "displayName": "Palexen Tools Lite",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "unityRelease": "10f1",
+  "description": "Includes a small, free set of tools for styling your scripts using drawers.",
+  "author": {
+    "name": "Palexen",
+    "url": "http://www.palexen.com",
+    "email": "tfyeeunravel@gmail.com"
+  },
+  "licensesUrl": "https://raw.githubusercontent.com/Palexen/Palexen-Tools-And-Xeen-Render-License/refs/heads/main/LICENSE"
+}
