@@ -26,6 +26,7 @@ public class DemoScript : MonoBehaviour
 {
     #region VARIABLES
 
+#if PALEXEN_TOOLS
     [Separator("Color Fields")]
     [Background(FieldPropertyColor.preset1)] public GameObject _object;
     [Background(FieldPropertyColor.preset2)] public List<GameObject> _list;
@@ -53,6 +54,35 @@ public class DemoScript : MonoBehaviour
         "Also you can use this to write instrucctions for your team members or for you in the future!\n" +
         "You can <color=yellow>also</color> use font styles", FontStyle.BoldAndItalic, TextAnchor.MiddleLeft)]
     public GameObject _necessaryField4;
+#else
+    [Header("Color Fields")]
+    public GameObject _object;
+    public List<GameObject> _list;
+    public GameObject[] _array;
+
+    [Header("Background Color Fields")]
+    public string _tagField;
+    public string _tagfieldColor;
+    public LayerMask anyBackgroundColor;
+
+    [Space(10)]
+    [Header("Your Message Here", ShowObjectMessage.message)]
+    public GameObject _necessaryField1;
+
+    [Space(10)]
+    [Header("Your Warning Message Here", ShowObjectMessage.warningMessage)]
+    public GameObject _necessaryField2;
+
+    [Space(10)]
+    [Header("Your Error Message Here", ShowObjectMessage.errorMessage)]
+    public GameObject _necessaryField3;
+
+    [Header("Notepad")]
+    [Tooltip("Your <color=cyan>Notepad</color> Message Here, you can write multiple lines of text here.\n" +
+        "Also you can use this to write instrucctions for your team members or for you in the future!\n" +
+        "You can <color=yellow>also</color> use font styles", FontStyle.BoldAndItalic, TextAnchor.MiddleLeft)]
+    public GameObject _necessaryField4;
+#endif
 
     #endregion
 }
